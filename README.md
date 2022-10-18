@@ -1,6 +1,5 @@
 # SaplingSimilarity
 This repository contains the code to build memory-based collaborative filtering using different similarity metrics and riproduce the results shown in https://arxiv.org/abs/2210.07039, where we introduce the Sapling Similarity. The python and library versions used to test this code are:
-
 - python 3.9.1
 - numpy 1.21.5
 - pandas 1.2.0
