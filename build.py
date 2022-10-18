@@ -20,6 +20,7 @@ if data == "0":
     N2 = 5040
     # LOADING EXPORT MATRICES AND COMPUTING REVEALED COMPARATIVE ADVANTAGE    
     RCA = pd.read_csv("data/RCA/RCA1996_2013.csv", header = None).to_numpy()
+    M = (RCA>=1).astype(np.int_)
     M_test = (pd.read_csv("data/RCA/RCA2018.csv", header = None).to_numpy()>=1).astype(np.int_)
     M_input_test = (pd.read_csv("data/RCA/RCA2013.csv", header = None).to_numpy()>=1).astype(np.int_)
     activations = (M_input_test<1).astype(bool)
@@ -91,14 +92,13 @@ elif similarity == "10":
 elif similarity == "11":
     B = sml.sapling(M,p)
     m = "SAP"
-np.savetxt("similarities/B_{}_{}.csv".format(m,project), B, delimiter = ",", fmt = "%8f")
+np.savetxt("similarities/B_{}_{}.csv".format(m,project), B, delimiter = ",", fmt = "%5f")
 
 if data == "0":
     if p == 0:
         S = np.nan_to_num((np.dot(B,M_input_test).T/np.sum(abs(B), axis = 1)).T)
     else:
         S = np.nan_to_num((np.dot(B, M_input_test.T).T/np.sum(abs(B), axis = 1)))
-    np.savetxt("pred.csv",S,delimiter = ",",fmt = "%6f")
     AUCPR = metr.average_precision_score(M_test.flatten()[activations.flatten()],S.flatten()[activations.flatten()])
     mP_10 = 0.0
     P_1000 = np.sum(M_test.flatten()[activations.flatten()][S.flatten()[activations.flatten()].argsort()][-1000:])/1000
