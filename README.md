@@ -27,4 +27,4 @@ we provide three datasets to test the different similarity metrics:
 build.py contains the code to build the collaborative filtering and test its performance.
 To run the code simply write **python build.py**.
 The code will ask you which dataset to use, which similarity metric and if it is a user-based or item-based collaborative filtering.
-To use the code for the Amazon and Movielens dataset you have to run the create_test.py code first (**python create_edgelist.py**) in order to select which products or movies will be used for the test.
+To use the code for the Amazon and Movielens dataset you have to run the create_test.py code first (**python create_test.py**) in order to select which products or movies will be used for the test.
