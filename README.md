@@ -36,6 +36,7 @@ similarity can be one of the following:
 - hub-promoted_index
 - taxonomy_network
 - probabilistic_spreading
+- pearson
 - sapling_similarity
 
 # Rating prediction
