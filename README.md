@@ -12,7 +12,7 @@ The python and library versions used to test this code are:
 - sklearn 1.0.2
 
 # An example to run the code
-To run the code using sapling similarity on export data with gamma = 0.7 and using test data to compute the performance:
+To run the code using sapling similarity on export data with gamma = 0.7:
 > python main.py --dataset="export" --test="test" --gamma=0.7 --similarity="sapling_similarity"
 
 We provide five processed datasets:
