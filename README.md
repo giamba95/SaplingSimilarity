@@ -22,7 +22,7 @@ We provide five processed datasets:
 - yelp2018
 - amazon-book
 
-if test="validation", a validation set is used to evaluate the performance.
+if test="validation", a validation set is used to evaluate the performance. The validation set we used for the results we show in the paper is located in the corresponding data folder. To generate a new validation set you can run the generate_validation.py code.
 
 gamma is the only parameter in our model and its value ranges from 0 (user-based approach) to 1 (item-based approach).
 
@@ -41,7 +41,7 @@ similarity can be one of the following:
 - sapling_similarity
 
 # Computational time
-To test our code we used a computer with the following specifics:
+To test our code we used a computer with the following specifications:
 - RAM: 32 GiB
 - processor: Intel® Core™ i7-10700 CPU @ 2.90GHz × 16 
 
@@ -50,9 +50,12 @@ with our computer the time required to run the SSCF method is:
 - amazon-product: 6.92s
 - gowalla: 512.03s
 - yelp2018: 512.90s
-- amazon-book 11896.65s
+- amazon-book 11938.65s
 
-to run the methods we do matrix multiplications and with big datasets the computer may not be able to execute the calculations. for this reason we implemented also a version in which similarity and recommendation matrices are computed in 10 blocks (the number of blocks may be regulated changing the M1 variable in the code). This version is main_light.py and with our computer it is necessary in order to run the code in the amazon-book dataset.
+# Computational time
+our proposed SSCF model for collaborative filterings requires the measure of 5 matrices: a similarity matrix for the users, a similarity matrix for the items, and three recommendation matrices: one for the user-based approach, one for the item-based approach and one for the final SSCF model. If we deal with a big dataset, depending on the specifications of the computer, it could not be possible to compute a whole matrix. For instance our computer is not able to run the main.py code when using the amazon-book dataset.
+We implemented a version main_light.py in which matrices computation is divided in 10 steps (the number of steps may be regulated changing the M1 variable in the code). in each step we compute only a fraction of the columns (or of the rows) of the matrices. using main_light.py our computer can run the SSCF model on amazon-book data.
+> python main_light.py --dataset="amazon-book" --test="test" --gamma=0.9
 
 # Rating prediction
 We also provide an implementation to predict ratings with movielens data (movielens_rating folder)
