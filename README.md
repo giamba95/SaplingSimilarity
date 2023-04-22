@@ -11,7 +11,8 @@ The python and library versions used to test this code are:
 - pandas 1.2.4
 - sklearn 1.0.2
 
-# An example to run SSCF on export data
+# An example to run the code
+To run the code using sapling similarity on export data with gamma = 0.7 and using test data to compute the performance:
 > python main.py --dataset="export" --test="test" --gamma=0.7 --similarity="sapling_similarity"
 
 We provide five processed datasets:
@@ -38,6 +39,20 @@ similarity can be one of the following:
 - probabilistic_spreading
 - pearson
 - sapling_similarity
+
+# Computational time
+To test our code we used a computer with the following specifics:
+- RAM: 32 GiB
+- processor: Intel® Core™ i7-10700 CPU @ 2.90GHz × 16 
+
+with our computer the time required to run the SSCF method is:
+- export data: 1.13s
+- amazon-product: 6.92s
+- gowalla: 512.03s
+- yelp2018: 512.90s
+- amazon-book 11896.65s
+
+to run the methods we do matrix multiplications and with big datasets the computer may not be able to execute the calculations. for this reason we implemented also a version in which similarity and recommendation matrices are computed in 10 blocks (the number of blocks may be regulated changing the M1 variable in the code). This version is main_light.py and with our computer it is necessary in order to run the code in the amazon-book dataset.
 
 # Rating prediction
 We also provide an implementation to predict ratings with movielens data (movielens_rating folder)
