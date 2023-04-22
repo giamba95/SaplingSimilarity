@@ -10,17 +10,16 @@ The python and library versions used to test this code are:
 - numpy 1.19.5
 - pandas 1.2.4
 - sklearn 1.0.2
-- 
-# Datasets
+
+# An example to run SSCF on export data
+> python main.py --dataset="export" --test="test" --gamma=0.7 --similarity="sapling_similarity"
+
 We provide five processed datasets:
 - export
 - amazon-product
 - gowalla
 - yelp2018
-- amazon-book. 
-We also provide the movielens dataset (https://grouplens.org/datasets/movielens) we use in our paper to compare similarity metrics in predicting ratings
-# An example to run SSCF on export data
-> python main.py --dataset="export" --test="test" --gamma=0.7 --similarity="sapling_similarity"
+- amazon-book
 
 if test="validation", a validation set is used to evaluate the performance.
 
@@ -39,3 +38,5 @@ similarity can be one of the following:
 - probabilistic_spreading
 - sapling_similarity
 
+# Rating prediction
+We also provide an implementation to predict ratings with movielens data (movielens_rating folder)
