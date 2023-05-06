@@ -1,6 +1,6 @@
 # Sapling Similarity Collaborative Filtering
 This repository contains the implementation for our paper:
-> Sapling Similarity Collaborative Filtering: a memory-based approach with high recommendation quality https://arxiv.org/abs/2210.07039
+> Sapling Similarity: a performing and interpretable memory-based tool for recommendation https://arxiv.org/abs/2210.07039
 
 where we introduce Sapling Similarity and SSCF.
 
