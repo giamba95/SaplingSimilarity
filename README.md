@@ -1,3 +1,7 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/sapling-similarity-outperforms-other-local/recommendation-systems-on-amazon-book)](https://paperswithcode.com/sota/recommendation-systems-on-amazon-book?p=sapling-similarity-outperforms-other-local)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/sapling-similarity-outperforms-other-local/recommendation-systems-on-yelp2018)](https://paperswithcode.com/sota/recommendation-systems-on-yelp2018?p=sapling-similarity-outperforms-other-local)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/sapling-similarity-outperforms-other-local/recommendation-systems-on-gowalla)](https://paperswithcode.com/sota/recommendation-systems-on-gowalla?p=sapling-similarity-outperforms-other-local)
+
 # Sapling Similarity Collaborative Filtering
 This repository contains the implementation for our paper:
 > Sapling Similarity: a performing and interpretable memory-based tool for recommendation https://arxiv.org/abs/2210.07039
