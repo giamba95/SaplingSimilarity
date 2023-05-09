@@ -57,7 +57,7 @@ Our proposed collaborative filtering model SSCF requires the measure of 5 matric
 We implemented the version main_light.py in which matrices computation is divided in 10 steps (the number of steps may be chosen through the M1 variable in the code) and instead of numpy.array we use numpy.memmap. In each step we compute only a fraction of the columns (or of the rows) of the matrices. using main_light.py our computer can run the SSCF model on amazon-book data.
 > python main_for_big_dataset.py --dataset="amazon-book" --test="test" --gamma=0.9
 
-The use of np.memmap requires an available disk space of 40 GiB.
+The use of np.memmap on Amazon-Book data requires an available disk space of 40 GiB.
 
 # Rating prediction
 We also provide an implementation to predict ratings with movielens data (in the movielens_rating folder)
