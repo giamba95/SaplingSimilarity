@@ -65,3 +65,6 @@ The use of np.memmap on Amazon-Book data requires an available disk space of 40 
 
 # Rating prediction
 We also provide an implementation to predict ratings with movielens data (in the movielens_rating folder)
+
+# Codes for m&a
+The m&a folder contains the code necessary to reproduce the results of the mergers and acquisitions exercise
