@@ -21,7 +21,7 @@ CI = 200
 # bin = matrix M without weights
 # (1) = with the adjustment that accounts for the size of the firm
 # (2) = with the adjustment that accounts for the rarity of the technology
-S = 8
+S = 7
 similarity = ["SS bin","SS(1) bin","SS(2) bin ","SS(1+2) bin","SS","SS(1)","SS(2)","SS(1+2)","LightGCN"]
 
 # loading data
@@ -37,7 +37,7 @@ N_tech = M[0].shape[1]
 
 
 # turn co0 to True to consider only firms with 0 co-occurrences
-co0 = True
+co0 = False
 if co0:
     idx = []
     for i in range(ma.shape[0]):
